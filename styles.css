@@ -96,6 +96,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -170,6 +171,7 @@ body {
   text-align: center;
   padding: 1rem;
   overflow: hidden;
+  box-shadow: inset 0px 37px 26px -42px rgba(0, 123, 255, 1);
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
@@ -309,8 +311,32 @@ nav ul {
 
 /* Innovation tab styles */
 
-#innovation-and-investment {
-  box-shadow: inset 0px 37px 26px -42px rgba(0, 123, 255, 1);
+#innovation-and-investment > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  color: var(--white);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  line-height: 1.5;
+  padding-bottom: 0;
+}
+
+#innovation-and-investment h2 {
+  font-size: 2rem;
+}
+
+#innovation-and-investment a {
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 8px;
+  font-size: 1.2rem;
+  width: fit-content;
+  margin: 0 auto;
+  text-decoration: none;
+  padding: 15px;
+  font-weight: bold;
 }
 
 /* MEDIA QUERIES (MEDIUM) */
