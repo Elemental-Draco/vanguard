@@ -1,6 +1,7 @@
-/* CSS BY YOUR NAME */
+/* CSS BY Jadias Washington */
 
 /* IMPORTED FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 /* IMPORT "INTER" FROM GOOGLE FONTS"
 
 /* CSS RESET */
@@ -147,6 +148,11 @@ table {
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
+body {
+  min-width: 400px;
+  font-family: var(--font);
+}
+
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
   width: 90%;
@@ -176,9 +182,6 @@ header > div p {
   background: url("images/vanguard-logo.svg") no-repeat center/contain;
 }
 
-header > div a {
-  display: flex;
-}
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
   display: grid;
@@ -223,6 +226,91 @@ header > div a {
 /* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
 .bar {
   animation: stepUp 1s ease-in-out forwards;
+}
+
+/* CSS ADDED BY STUDENT */
+
+/* HEADER STYLES */
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+
+header > div a {
+  display: flex;
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 1.8rem;
+  gap: 10px;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--black);
+  height: 100px;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+nav h2 {
+  visibility: hidden;
+  height: 1px;
+}
+
+#menu-button {
+  display: none;
+}
+
+nav {
+  position: relative;
+}
+
+nav label {
+  display: inline-block;
+  cursor: pointer;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+}
+
+label span {
+  background-color: var(--white);
+  display: block;
+  height: 0.25rem;
+  width: 2rem;
+  position: relative;
+}
+
+label span::before,
+label span::after {
+  background: var(--white);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+label span:before {
+  top: 0.75rem;
+}
+label span:after {
+  top: -0.75rem;
+}
+
+nav ul {
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* Innovation tab styles */
+
+#innovation-and-investment {
+  box-shadow: inset 0px 37px 26px -42px rgba(0, 123, 255, 1);
 }
 
 /* MEDIA QUERIES (MEDIUM) */
