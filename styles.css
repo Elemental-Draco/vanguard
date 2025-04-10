@@ -368,10 +368,9 @@ nav input:checked ~ ul {
   font-weight: bold;
 }
 
-/* OUR EXPERTISE STYLES */
+/* GENERAL SECTION STYLES */
 
 main > section > h2 {
-  font-weight: bold;
   font-size: 1.8rem;
   padding: 0 0 20px 10px;
 }
@@ -379,6 +378,26 @@ main > section > h2 {
 main > section.container {
   padding-top: 40px;
   line-height: 1.5;
+}
+
+/* WHAT WE OFFER STYLES */
+
+.cards > section {
+  color: var(--white);
+  background-color: var(--blue);
+  padding: 20px 15px 15px;
+  border-radius: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cards h3 {
+  padding: 10px;
+  font-size: 1.3rem;
 }
 
 /* MEDIA QUERIES (MEDIUM) */
