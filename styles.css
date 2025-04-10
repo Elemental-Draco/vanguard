@@ -402,9 +402,7 @@ main > section.container {
 
 /* RESULTS STYLES */
 
-#results {
-  display: grid;
-  grid-template-columns: 1fr;
+#result-section {
   background-color: var(--blue);
   width: 100%;
   color: white;
@@ -412,7 +410,7 @@ main > section.container {
   margin-top: 70px;
 }
 
-#results h3 {
+#result-section h3 {
   font-size: 1.8rem;
   margin: 10px 0 20px 15px;
 }
@@ -439,6 +437,61 @@ td,
 th {
   border: 1px solid var(--charcoal);
   padding: 10px;
+}
+
+#results {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* CONTACT SECTION */
+
+main > section:last-child {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 40px;
+  line-height: 1.5rem;
+}
+
+main > section:last-child > h2 {
+  margin-bottom: 15px;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form p {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea {
+  border: 3px solid var(--blue);
+}
+
+form input {
+  height: 40px;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: 1px solid var(--red);
+  /* todo */
+}
+
+form input[type="submit"] {
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  height: 50px;
+  margin-top: 20px;
 }
 
 /* MEDIA QUERIES (MEDIUM) */
