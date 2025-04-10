@@ -368,6 +368,19 @@ nav input:checked ~ ul {
   font-weight: bold;
 }
 
+/* OUR EXPERTISE STYLES */
+
+main > section > h2 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding: 0 0 20px 10px;
+}
+
+main > section.container {
+  padding-top: 40px;
+  line-height: 1.5;
+}
+
 /* MEDIA QUERIES (MEDIUM) */
 
 #results {
