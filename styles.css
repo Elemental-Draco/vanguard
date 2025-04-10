@@ -371,7 +371,7 @@ nav input:checked ~ ul {
 /* GENERAL SECTION STYLES */
 
 main > section > h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   padding: 0 0 20px 15px;
 }
 
@@ -492,6 +492,21 @@ form input[type="submit"] {
   font-weight: bold;
   height: 50px;
   margin-top: 20px;
+}
+
+/* FOOTER STYLES */
+
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 40px;
+  line-height: 1.5;
+}
+
+address > p:last-of-type a:last-of-type {
+  text-decoration: none;
+  color: var(--white);
 }
 
 /* MEDIA QUERIES (MEDIUM) */
