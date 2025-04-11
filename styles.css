@@ -195,6 +195,7 @@ header > div p {
   width: 100%;
   max-width: 800px;
   padding: 1rem;
+  padding-bottom: 3rem;
   position: relative;
 }
 /* ADD ON TRANSITION ON HEIGHT */
@@ -406,19 +407,21 @@ main > section.container {
   background-color: var(--blue);
   width: 100%;
   color: white;
-  padding: 40px 30px 20px;
+  padding: 40px 40px 20px;
   margin-top: 70px;
+  line-height: 1.5;
 }
 
 #result-section h3 {
   font-size: 1.8rem;
-  margin: 10px 0 20px 15px;
+  margin: 20px 0 30px 15px;
 }
 
 table {
   text-align: center;
-  margin: 30px auto 20px;
+  margin: 0 auto;
   width: 100%;
+  height: 100%;
 }
 
 th {
@@ -436,12 +439,23 @@ tr:nth-of-type(even) {
 td,
 th {
   border: 1px solid var(--charcoal);
-  padding: 10px;
+  padding: 20px;
 }
 
 #results {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: end;
+  height: 100%;
+  gap: 2rem;
+}
+
+#results > section {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 /* CONTACT SECTION */
@@ -511,7 +525,7 @@ address > p:last-of-type a:last-of-type {
 
 /* MEDIA QUERIES (MEDIUM) */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 800px) {
   #results {
     grid-template-columns: 1fr 1fr;
   }
