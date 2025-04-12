@@ -21,23 +21,25 @@
   <body>
     <!-- WRAP CONTENT IN VALIDATED, SEMANTIC HTML5 (SEE HINTS FOLDER LINKED TO IN THE CANVAS INSTRUCTIONS)-->
     <header>
-      <div>
-        <a href="#">
-          <p></p>
-          <h1>Vanguard</h1>
-        </a>
-      </div>
+      <div class="container">
+        <div>
+          <a href="#">
+            <p></p>
+            <h1>Vanguard</h1>
+          </a>
+        </div>
 
-      <nav>
-        <label for="menu-button"><span></span></label>
-        <input type="checkbox" id="menu-button" />
-        <h2>Main Navigation</h2>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+        <nav>
+          <label for="menu-button"><span></span></label>
+          <input type="checkbox" id="menu-button" />
+          <h2>Main Navigation</h2>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <section id="innovation-and-investment">
@@ -185,17 +187,28 @@
 
             <p>
               <label for="company-name">Company Name:</label>
-              <input type="text" id="company-name" name="company-name" />
+              <input
+                type="text"
+                id="company-name"
+                name="company-name"
+                required
+              />
             </p>
 
             <p>
               <label for="industry">Industry:</label>
-              <input type="text" id="industry" name="industry" />
+              <input type="text" id="industry" name="industry" required />
             </p>
 
             <p>
               <label for="help">How can we help you?</label>
-              <textarea id="help" name="help" rows="6" cols="50"></textarea>
+              <textarea
+                id="help"
+                name="help"
+                rows="6"
+                cols="50"
+                required
+              ></textarea>
             </p>
             <input type="submit" value="Submit" />
           </form>

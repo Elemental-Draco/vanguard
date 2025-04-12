@@ -204,7 +204,7 @@ header > div p {
   background: var(--charcoal);
   border-radius: 10px;
   position: relative;
-  /* transition: ; */
+  transition: height 1s;
   height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -233,6 +233,24 @@ header > div p {
 
 /* CSS ADDED BY STUDENT */
 
+/* heading drop animation*/
+@keyframes heading-drop {
+  0% {
+    translate: 0 -30px;
+    opacity: 0;
+  }
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+h2,
+h3,
+#innovation-and-investment a {
+  animation: heading-drop 1s ease-out;
+}
+
 /* HEADER STYLES */
 
 h1,
@@ -255,7 +273,13 @@ header > div {
 
 header {
   background-color: var(--black);
-  padding: 20px;
+  padding: 20px 0;
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav h2 {
@@ -273,11 +297,10 @@ nav {
 
 nav label {
   display: inline-block;
-  cursor: pointer;
   padding: 1rem;
   position: absolute;
   right: 0;
-  top: -40px;
+  top: -15px;
 }
 
 label span {
@@ -309,7 +332,7 @@ nav ul {
   overflow: hidden;
   max-width: 200px;
   margin-left: auto;
-
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -327,6 +350,7 @@ nav ul a {
   padding: 10px;
   line-height: 1.6rem;
   font-size: 1.6rem;
+  transition: all 0.5s;
 }
 
 nav ul a:hover {
@@ -352,10 +376,6 @@ nav input:checked ~ ul {
   padding-bottom: 0;
 }
 
-#innovation-and-investment h2 {
-  font-size: 2rem;
-}
-
 #innovation-and-investment a {
   background-color: var(--blue);
   color: var(--white);
@@ -366,12 +386,21 @@ nav input:checked ~ ul {
   text-decoration: none;
   padding: 15px;
   font-weight: bold;
+  transition: all 0.4s ease-out;
+}
+
+#innovation-and-investment a:hover {
+  scale: 110%;
+  background-color: var(--red);
 }
 
 /* GENERAL SECTION STYLES */
 
-main > section > h2 {
+h2 {
   font-size: 2rem;
+}
+
+main > section h2 {
   padding: 0 0 20px 15px;
 }
 
@@ -387,6 +416,11 @@ main > section.container {
   background-color: var(--blue);
   padding: 20px 15px 15px;
   border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.cards > section:hover {
+  translate: 0 -10px;
 }
 
 .cards {
@@ -485,16 +519,17 @@ form p {
 form input,
 form textarea {
   border: 3px solid var(--blue);
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border: 3px solid var(--charcoal);
 }
 
 form input {
   height: 40px;
-}
-
-form input:focus,
-form textarea:focus {
-  outline: 1px solid var(--red);
-  /* todo */
+  font-size: 1.3rem;
 }
 
 form input[type="submit"] {
@@ -505,6 +540,13 @@ form input[type="submit"] {
   font-weight: bold;
   height: 50px;
   margin-top: 20px;
+  transition: all 0.4s ease-out;
+  border: none;
+}
+
+form input[type="submit"]:hover {
+  scale: 110%;
+  background-color: var(--red);
 }
 
 /* FOOTER STYLES */
