@@ -171,7 +171,7 @@ body {
   text-align: center;
   padding: 1rem;
   overflow: hidden;
-  box-shadow: inset 0px 37px 26px -42px rgba(0, 123, 255, 1);
+  box-shadow: inset 0px 45px 40px -38px rgb(0, 123, 255);
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
@@ -391,8 +391,8 @@ main > section.container {
 }
 
 .cards {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 15px;
 }
 
@@ -526,6 +526,25 @@ address > p:last-of-type a:last-of-type {
 /* MEDIA QUERIES (MEDIUM) */
 
 @media screen and (min-width: 800px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav label {
+    display: none;
+  }
+
+  nav ul {
+    max-height: fit-content;
+    max-width: max-content;
+    flex-direction: row;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
   #results {
     grid-template-columns: 1fr 1fr;
   }
@@ -538,6 +557,15 @@ address > p:last-of-type a:last-of-type {
   }
   .bar-chart {
     width: 50%;
+  }
+
+  form input,
+  form textarea {
+    max-width: 90%;
+  }
+
+  form input[type="submit"] {
+    max-width: 95%;
   }
 }
 
